@@ -1,0 +1,44 @@
+:root {
+  //theme or accent color and hues
+  --cl-accent: #64d370;
+  --cl-accent-brighter: #00ba2d;
+  --cl-accent-lighter: #65cf71;
+  --cl-accent-dimmed: #64d37030;
+  --cl-accent-strongly-dimmed: #64d37050;
+  --cl-accent-faded: #26f03a10;
+
+  //main color and hues
+  --cl-normal: #f5faff;
+  --cl-normal-dimmed: #f5faff70;
+  --cl-normal-super-dimmed: #f5faff80;
+  --cl-darker: #dee6ee;
+  --cl-the-darkest: #02020240;
+
+  --cl-lighter: #ffffff;
+
+  //text color and hues
+  --cl-text-normal: #020202;
+  --cl-text-darker: #000000;
+  --cl-text-lighter: #f4f9fe;
+  --cl-datetime: #b5c2ce;
+
+  //color showing if entered data is correct or incorrect
+  --cl-alert: #fe3666;
+  --cl-incorrect: #f87676;
+  --cl-correct: #64d370;
+
+  //color of backdrop
+  --cl-backdrop: #02020285;
+
+  //color of overlay in product card
+  --cl-product-overlay: #111010;
+
+  //close chat button color
+  --cl-close-chat: #f35353;
+
+  //color of placeholder in forms
+  --cl-form-placeholder: #a0abb6;
+
+  //link active color
+  --cl-link-active: #3d9646;
+}

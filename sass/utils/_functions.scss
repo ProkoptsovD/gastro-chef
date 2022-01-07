@@ -1,0 +1,9 @@
+//function to calculate line height. Don't want use calculator in my smartphone :)
+@function lineHeight($font-size, $line-height) {
+  @return ($line-height / $font-size);
+}
+
+//simple function that allows to get needed box-shadow
+@function getShadow($key) {
+  @return get-map($box-shadow-set, $key);
+}
