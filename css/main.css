@@ -297,6 +297,33 @@ summary {
   display: list-item;
 }
 
+h1,
+h2,
+h3,
+h4,
+h6,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
 body {
   font-family: var(--font-face), var(--font-secondary);
   font-weight: var(--font-weight);
@@ -304,5 +331,9 @@ body {
   line-height: var(--line-height);
   background-color: var(--cl-normal);
   color: var(--cl-text-normal);
+}
+
+.container {
+  padding: 0 20px;
 }
 /*# sourceMappingURL=main.css.map */
