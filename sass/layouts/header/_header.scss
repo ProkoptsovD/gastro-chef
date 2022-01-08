@@ -1,0 +1,11 @@
+.carousel {
+  display: flex;
+
+  &-cell {
+    width: 66%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8c8;
+    counter-increment: gallery-cell;
+  }
+}

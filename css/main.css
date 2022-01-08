@@ -336,4 +336,18 @@ body {
 .container {
   padding: 0 20px;
 }
+
+.carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.carousel-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8c8;
+  counter-increment: gallery-cell;
+}
 /*# sourceMappingURL=main.css.map */
