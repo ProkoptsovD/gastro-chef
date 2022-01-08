@@ -1,0 +1,9 @@
+body {
+  font-family: var(--font-face), var(--font-secondary);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+
+  background-color: var(--cl-normal);
+  color: var(--cl-text-normal);
+}

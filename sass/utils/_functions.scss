@@ -8,7 +8,17 @@
   @return get-map($box-shadow-set, $key);
 }
 
-//function to get transition time properties
+//function to get transition time atributes
 @function getTime($key) {
   @return get-map($tr-time, $key);
+}
+
+//function to get transition time function atributes
+@function getTimeFunc($key) {
+  @return get-map($tr-time-func, $key);
+}
+
+//function to get media query declaration breakpoints
+@function getBreak($key) {
+  @return get-map($breakpoint, $key);
 }
