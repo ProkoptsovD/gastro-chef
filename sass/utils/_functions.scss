@@ -7,3 +7,8 @@
 @function getShadow($key) {
   @return get-map($box-shadow-set, $key);
 }
+
+//function to get transition time properties
+@function getTime($key) {
+  @return get-map($tr-time, $key);
+}

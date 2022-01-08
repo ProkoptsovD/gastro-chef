@@ -1,0 +1,10 @@
+//time of transitions
+$tr-time: (
+  normal: 250ms,
+  slow: 500ms,
+);
+
+//timing function
+$tr-time-func: (
+  1: cubic-bezier(0.42, 0.97, 0.52, 1.49),
+);
