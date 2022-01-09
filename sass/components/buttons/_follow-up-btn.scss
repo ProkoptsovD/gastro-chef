@@ -1,0 +1,19 @@
+.follow-up-btn {
+  --cl-bg: #020202;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 3px;
+
+  border-radius: 50%;
+  background-color: var(--cl-bg);
+
+  &__icon {
+    width: 15px;
+    height: 15px;
+
+    fill: var(--cl-normal);
+  }
+}
