@@ -1,0 +1,24 @@
+@mixin btn($size, $bg-color) {
+  --size-xs: 21px;
+  --size-s: 26px;
+  --size-md: 39px;
+  --size-lg: 64;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: var(#{$size});
+  height: var(#{$size});
+
+  font-family: inherit;
+
+  border: 0;
+  border-radius: 50%;
+
+  box-shadow: getShadow(4);
+
+  background-color: var(#{$bg-color});
+
+  cursor: pointer;
+}

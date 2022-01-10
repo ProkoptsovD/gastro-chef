@@ -1,14 +1,8 @@
 .follow-up-btn {
+  @include btn(--size-xs, --cl-bg);
   --cl-bg: #020202;
 
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-
   padding: 3px;
-
-  border-radius: 50%;
-  background-color: var(--cl-bg);
 
   &__icon {
     width: 15px;

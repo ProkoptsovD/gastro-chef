@@ -1,0 +1,31 @@
+.contact-tel {
+  --size-hover: 1.1;
+
+  @include btn(--size-lg, --cl-normal);
+
+  padding: 15px 18px 18px 18px;
+
+  transition: transform getTime(faster) getTimeFunc(1);
+
+  &:hover {
+    transform: scale(var(--size-hover));
+  }
+
+  &__inner {
+    display: none;
+  }
+
+  &__icon {
+    width: 27px;
+    height: 30px;
+
+    fill: var(--cl-accent-lighter);
+
+    transform: rotate(-1.24deg);
+    transition: transform getTime(faster) getTimeFunc(1);
+
+    .contact-tel:hover & {
+      transform: scale(var(--size-hover));
+    }
+  }
+}

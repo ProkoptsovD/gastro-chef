@@ -1,0 +1,40 @@
+.mobile-menu-btn {
+  --size-hover: 1.1;
+  --fill-icon: #020202;
+
+  @include btn(--size-lg, --cl-normal);
+
+  padding: 22px 20px;
+
+  transition: transform getTime(faster) getTimeFunc(1);
+
+  &:hover {
+    transform: scale(var(--size-hover));
+  }
+
+  &__icon {
+    width: 25px;
+    height: 20px;
+
+    fill: var(--fill-icon);
+    scale: (1);
+
+    transition: transform getTime(faster) getTimeFunc(1);
+
+    .mobile-menu-btn:hover & {
+      transform: scale(var(--size-hover));
+    }
+  }
+
+  &__icon-cross {
+    display: none;
+
+    .mobile-menu-btn.is-opened & {
+      display: block;
+    }
+  }
+}
+
+.mobile-menu-btn.is-opened .mobile-menu-btn__icon-menu {
+  display: none;
+}
