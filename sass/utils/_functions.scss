@@ -20,5 +20,5 @@
 
 //function to get media query declaration breakpoints
 @function getBreak($key) {
-  @return map-get($breakpoint, $key);
+  @return map-get($breakpoints, $key);
 }

@@ -1,6 +1,8 @@
-$breakpoint: (
-  xs: 320px,
-  s: 480px,
-  md: 768px,
-  lg: 1200px,
+//preferable media breakpoints
+$breakpoints: (
+  "mobile": 375px,
+  "mobile-l": 480px,
+  "tablet-portrait": 768px,
+  "tablet-landscape": 900px,
+  "desktop": 1200px,
 );

@@ -1,5 +1,59 @@
+//this mixin is for fonts
 @mixin font-preset($font-weight, $font-size, $line-height) {
   font-weight: $font-weight;
   font-size: $font-size;
   line-height: lineHeight($font-size, $line-height);
+}
+
+//this mixin block is for media queries
+@mixin media($breakpoint) {
+  @if $breakpoint == ">=mobile" {
+    @media screen and (min-width: getBreak(mobile)) and (max-width: (getBreak(tablet-portrait) - 1)) {
+      @content;
+    }
+  } @else if $breakpoint == "=mobile" {
+    @media screen and (min-width: getBreak(mobile)) {
+      @content;
+    }
+  } @else if $breakpoint == "<mobile" {
+    @media screen and (max-width: (getBreak(mobile) - 1)) {
+      @content;
+    }
+  } @else if $breakpoint == "=mobile-l" {
+    @media screen and (min-width: getBreak(mobile-l)) {
+      @content;
+    }
+  } @else if $breakpoint == "=tablet-portrait" {
+    @media screen and (min-width: getBreak(tablet-portrait)) {
+      @content;
+    }
+  } @else if $breakpoint == "<tablet-portrait" {
+    @media screen and (max-width: (getBreak(desktop) - 1)) {
+      @content;
+    }
+  } @else if $breakpoint == ">=tablet-portrait" {
+    @media screen and (min-width: getBreak(tablet-portrait)) and (max-width: (getBreak(desktop) - 1)) {
+      @content;
+    }
+  } @else if $breakpoint == "=tablet-landscape" {
+    @media screen and (min-width: getBreak(tablet-landscape)) {
+      @content;
+    }
+  } @else if $breakpoint == "<tablet-landscape" {
+    @media screen and (max-width: (getBreak(desktop) - 1)) {
+      @content;
+    }
+  } @else if $breakpoint == ">=tablet-landscape" {
+    @media screen and (min-width: getBreak(tablet-landscape)) and (max-width: (getBreak(desktop) - 1)) {
+      @content;
+    }
+  } @else if $breakpoint == "=desktop" {
+    @media screen and (min-width: getBreak(desktop)) {
+      @content;
+    }
+  } @else if $breakpoint == "<desktop" {
+    @media screen and (max-width: (getBreak(desktop) - 1)) {
+      @content;
+    }
+  }
 }
