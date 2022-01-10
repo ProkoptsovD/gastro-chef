@@ -19,7 +19,7 @@
             <div class="mobile-menu">
                 <nav class="header__navbar" aria-label="Главный блок навигации по сайту">
                     <a class="logo header__logo" href="./index.html">
-                        <img src="./lib/icons/logo.svg" alt="Логотип компании Gastro Chef">
+                        <img class="logo__img" src="./lib/icons/logo.svg" alt="Логотип компании Gastro Chef">
                         healthy ration
                     </a>
                     <ul class="navigation">
@@ -50,19 +50,21 @@
                         </li>
                     </ul>
     
-                    <a class="contact-tel" href="telto:+380689494919" aria-label="Позвонить по телефону, чтобы сделать заказ">
-                        <span class="contact-tel__inner">+38 (068) 949 - 49 -19</span>
-                        <svg class="contact-tel__icon">
-                            <use href="./lib/icons/icons.svg#phone"></use>
-                        </svg>
-                    </a>
-
-                    <button class="mobile-menu-btn">
-                        <svg class="mobile-menu-btn__icon">
-                            <use class="mobile-menu-btn__icon-menu" href="./lib/icons/icons.svg#menu"></use>
-                            <use class="mobile-menu-btn__icon-cross" href="./lib/icons/icons.svg#cross"></use>
-                        </svg>
-                    </button>
+                    <div class="header__btn-wrapper">
+                        <a class="contact-tel" href="telto:+380689494919" aria-label="Позвонить по телефону, чтобы сделать заказ">
+                            <span class="contact-tel__inner">+38 (068) 949 - 49 -19</span>
+                            <svg class="contact-tel__icon">
+                                <use href="./lib/icons/icons.svg#phone"></use>
+                            </svg>
+                        </a>
+    
+                        <button class="mobile-menu-btn">
+                            <svg class="mobile-menu-btn__icon">
+                                <use class="mobile-menu-btn__icon-menu" href="./lib/icons/icons.svg#menu"></use>
+                                <use class="mobile-menu-btn__icon-cross" href="./lib/icons/icons.svg#cross"></use>
+                            </svg>
+                        </button>
+                    </div>
     
                     <ul class="lang-switcher" aria-label="Изменить язык страницы">
                         <li class="lang-switcher__item">

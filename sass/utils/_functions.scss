@@ -22,3 +22,8 @@
 @function getBreak($key) {
   @return map-get($breakpoints, $key);
 }
+
+//function to get z-indexes
+@function getZ($key) {
+  @return map-get($z-index, $key);
+}
