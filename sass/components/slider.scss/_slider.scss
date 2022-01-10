@@ -1,0 +1,69 @@
+//================appearence and positioning===========//
+.slider {
+  &__title {
+    @extend %visually-hidden;
+  }
+
+  &__pictureset {
+    position: absolute;
+    top: 95px;
+    right: 50px;
+  }
+
+  &__pictureset::before {
+    --cl-border: #ffffff;
+    position: absolute;
+
+    content: "";
+    width: 114px;
+    height: 114px;
+
+    border: 7px solid var(--cl-border);
+    border-radius: 50%;
+
+    z-index: getZ(3);
+  }
+
+  &__picture {
+    clip-path: circle();
+  }
+}
+
+//==================programms description styles==================//
+
+.slider__subtitle {
+  margin-bottom: 5px;
+
+  font-family: var(--font-secondary);
+  @include font-preset(700, 16px, 18px);
+  letter-spacing: var(--letter-spacing);
+}
+
+.slider__text {
+  margin-bottom: 10px;
+  line-height: lineHeight(10px, 13px);
+}
+
+.slider__mark {
+  background-color: transparent;
+  color: var(--cl-accent);
+}
+
+//================programm price and button styles=================//
+.slider__btn {
+  margin-bottom: 10px;
+}
+.slider__offer-meta {
+  display: block;
+  margin-bottom: 2px;
+
+  font-size: 12px;
+  line-height: lineHeight(12px, 16px);
+}
+.slider__price {
+  display: block;
+  margin-bottom: 45px;
+
+  @include font-preset(700, 18px, 18px);
+  color: var(--cl-accent);
+}

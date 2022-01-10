@@ -1,9 +1,18 @@
 .logo {
+  position: relative;
+
   display: inline-block;
+
+  font-family: var(--font-secondary);
   text-align: center;
 
-  &__img {
-    width: 200px;
-    height: auto;
+  color: inherit;
+
+  &__text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
   }
 }

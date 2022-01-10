@@ -20,7 +20,7 @@
                 <nav class="header__navbar" aria-label="Главный блок навигации по сайту">
                     <a class="logo header__logo" href="./index.html">
                         <img class="logo__img" src="./lib/icons/logo.svg" alt="Логотип компании Gastro Chef">
-                        healthy ration
+                        <span class="logo__text">healthy ration</span>
                     </a>
                     <ul class="navigation">
                         <li class="navigation__tab">
@@ -138,18 +138,39 @@
                 </ul>
             </nav>
 
-            <article class="slider" aria-label="Галерея с лучшими предложениями" id="slider">
+            <article class="slider header__slider" aria-label="Галерея с лучшими предложениями" id="slider">
                 <h1 class="slider__title">Лучшие предложения</h1>
+                <div class="slider__pictureset header__pictureset" aria-labelledby="Изображения товаров к программам питания">
+                    <picture>
+                        <source
+                            srcset="./lib/images/mobile/webp/home/home-01@1x.webp 1x, ./lib/images/mobile/webp/home/home-01@2x.webp 2x, ./lib/images/mobile/webp/home/home-01@3x.webp 3x"
+                            type="image/webp">
+                        <source
+                            srcset="./lib/images/mobile/jpg/home/home-01@1x.jpg 1x, ./lib/images/mobile/jpg/home/home-01@2x.jpg 2x, ./lib/images/mobile/jpg/home/home-01@3x.jpg 3x"
+                            type="image/jpg">
+                
+                        <img class="slider__picture" src="./lib/images/mobile/jpg/home/home01-@1x.jpg"
+                            alt="Иллюстрация к предложению. Авокадо и бутолочка со смузи из авокадо">
+                    </picture>
+                </div>
                 <div class="slider__inner">
                     <h2 class="slider__subtitle">
-                        Detox программа – вкусное очищение организма
+                        Detox программа –</br> 
+                            <mark class="slider__mark">
+                                вкусное очищение</br>
+                            </mark>
+                        организма
                     </h2>
                     <p class="slider__text">
-                        8 бутылочек натуральных смузи и фрешей.
+                        8 бутылочек 
+                            <mark class="slider__mark">
+                                натуральных</br>
+                            </mark>
+                        смузи и фрешей.
                     </p>
 
                     <div class="slider__subinner">
-                        <button class="btn slider__btn" type="button" aria-labelledby="Заказать">
+                        <button class="btn btn--inactive btn--s slider__btn" type="button" aria-labelledby="Заказать">
                             Заказать
                         </button>
                         <span class="slider__offer-meta">
@@ -159,17 +180,6 @@
                             </span>
                         </span>
                     </div>
-                </div>
-                <div class="slider__pictureset" aria-labelledby="Изображения товаров к программам питания">
-                    <picture>
-                        <source srcset="./lib/images/mobile/webp/home/home-01@1x.webp 1x, ./lib/images/mobile/webp/home/home-01@2x.webp 2x, ./lib/images/mobile/webp/home/home-01@3x.webp 3x"
-                                type="image/webp">
-                        <source srcset="./lib/images/mobile/jpg/home/home-01@1x.jpg 1x, ./lib/images/mobile/jpg/home/home-01@2x.jpg 2x, ./lib/images/mobile/jpg/home/home-01@3x.jpg 3x"
-                                type="image/jpg">
-                        
-                        <img class="slider__picture" src="./lib/images/mobile/jpg/home/home01-@1x.jpg"
-                            alt="Иллюстрация к предложению. Авокадо и бутолочка со смузи из авокадо">
-                    </picture>
                 </div>
                 <div class="slider__controls" aria-controls="slider">
                     <svg>

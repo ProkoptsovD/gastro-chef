@@ -34,6 +34,17 @@
   --cl-link-active: #3d9646;
 }
 
+.slider__title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -337,6 +348,50 @@ body {
   padding: 0 20px;
 }
 
+.btn {
+  display: inline-block;
+  padding: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14286;
+  letter-spacing: var(--letter-spacing);
+  text-align: center;
+  vertical-align: middle;
+  border: 3px solid;
+  border-radius: 190px;
+  -webkit-box-shadow: 0px 0px 40px #56565630;
+          box-shadow: 0px 0px 40px #56565630;
+  -webkit-transition: background-color 250ms linear, color 150ms linear;
+  transition: background-color 250ms linear, color 150ms linear;
+}
+
+.btn--s {
+  min-width: 136px;
+  min-height: 33px;
+}
+
+.btn--md {
+  min-width: 163px;
+  min-height: 35px;
+}
+
+.btn--lg {
+  min-width: 280px;
+  min-height: 36px;
+}
+
+.btn--inactive {
+  border-color: var(--cl-accent);
+  background-color: var(--cl-accent);
+  color: var(--cl-normal);
+}
+
+.btn:hover {
+  border-color: var(--cl-accent);
+  background-color: var(--cl-normal);
+  color: var(--cl-accent);
+}
+
 .lang-switcher__btn {
   --size-xs: 21px;
   --size-s: 26px;
@@ -353,7 +408,7 @@ body {
           align-items: center;
   width: var(--size-md);
   height: var(--size-md);
-  font-family: inherit;
+  font-family: var(--font-secondary);
   border: 0;
   border-radius: 50%;
   -webkit-box-shadow: 0px 0px 40px #56565630;
@@ -392,7 +447,7 @@ body {
           align-items: center;
   width: var(--size-xs);
   height: var(--size-xs);
-  font-family: inherit;
+  font-family: var(--font-secondary);
   border: 0;
   border-radius: 50%;
   -webkit-box-shadow: 0px 0px 40px #56565630;
@@ -427,7 +482,7 @@ body {
           align-items: center;
   width: var(--size-lg);
   height: var(--size-lg);
-  font-family: inherit;
+  font-family: var(--font-secondary);
   border: 0;
   border-radius: 50%;
   -webkit-box-shadow: 0px 0px 40px #56565630;
@@ -491,7 +546,7 @@ body {
           align-items: center;
   width: var(--size-lg);
   height: var(--size-lg);
-  font-family: inherit;
+  font-family: var(--font-secondary);
   border: 0;
   border-radius: 50%;
   -webkit-box-shadow: 0px 0px 40px #56565630;
@@ -531,6 +586,67 @@ body {
           transform: scale(var(--size-hover));
 }
 
+.slider__pictureset {
+  position: absolute;
+  top: 95px;
+  right: 50px;
+}
+
+.slider__pictureset::before {
+  --cl-border: #ffffff;
+  position: absolute;
+  content: "";
+  width: 114px;
+  height: 114px;
+  border: 7px solid var(--cl-border);
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.slider__picture {
+  -webkit-clip-path: circle();
+          clip-path: circle();
+}
+
+.slider__subtitle {
+  margin-bottom: 5px;
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.125;
+  letter-spacing: var(--letter-spacing);
+}
+
+.slider__text {
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.slider__mark {
+  background-color: transparent;
+  color: var(--cl-accent);
+}
+
+.slider__btn {
+  margin-bottom: 10px;
+}
+
+.slider__offer-meta {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 12px;
+  line-height: 1.33333;
+}
+
+.slider__price {
+  display: block;
+  margin-bottom: 45px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--cl-accent);
+}
+
 .header {
   position: relative;
   padding: 20px 0 0 0;
@@ -546,8 +662,8 @@ body {
   width: 100%;
   height: 519px;
   background-color: var(--cl-accent);
-  -webkit-clip-path: circle(259px at 66% 0);
-          clip-path: circle(259px at 66% 0);
+  -webkit-clip-path: circle(259px at 75.5% -31px);
+          clip-path: circle(259px at 75.5% -31px);
   z-index: -1;
 }
 
@@ -564,14 +680,16 @@ body {
 
 .header__logo {
   position: relative;
-  margin-left: -20px;
+  margin: -7px 0 0 -20px;
+  font-size: 8px;
+  line-height: 1.125;
   z-index: 2;
 }
 
 .header__logo::before {
   position: absolute;
   top: -33px;
-  left: 14px;
+  left: 13px;
   content: "";
   width: 139px;
   height: 139px;
@@ -611,13 +729,24 @@ body {
   display: none;
 }
 
-.logo {
-  display: inline-block;
-  text-align: center;
+.header__slider {
+  padding-top: 165px;
+  padding-left: 30px;
 }
 
-.logo__img {
-  width: 200px;
-  height: auto;
+.logo {
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-secondary);
+  text-align: center;
+  color: inherit;
+}
+
+.logo__text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 /*# sourceMappingURL=main.css.map */

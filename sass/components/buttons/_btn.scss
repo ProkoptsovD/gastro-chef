@@ -1,24 +1,45 @@
-@mixin btn($size, $bg-color) {
-  --size-xs: 21px;
-  --size-s: 26px;
-  --size-md: 39px;
-  --size-lg: 64;
+//================base styles===================//
+.btn {
+  display: inline-block;
+  padding: 0;
 
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  @include font-preset(500, 14px, 16px);
+  letter-spacing: var(--letter-spacing);
 
-  width: var(#{$size});
-  height: var(#{$size});
+  text-align: center;
+  vertical-align: middle;
 
-  font-family: inherit;
-
-  border: 0;
-  border-radius: 50%;
-
+  border: 3px solid;
+  border-radius: 190px;
   box-shadow: getShadow(4);
 
-  background-color: var(#{$bg-color});
+  transition: background-color getTime(normal) getTimeFunc(1),
+    color getTime(faster) getTimeFunc(1);
+}
+//=================sizes=========================//
+.btn--s {
+  min-width: 136px;
+  min-height: 33px;
+}
 
-  cursor: pointer;
+.btn--md {
+  min-width: 163px;
+  min-height: 35px;
+}
+
+.btn--lg {
+  min-width: 280px;
+  min-height: 36px;
+}
+//===============interaction styles=================//
+.btn--inactive {
+  border-color: var(--cl-accent);
+  background-color: var(--cl-accent);
+  color: var(--cl-normal);
+}
+
+.btn:hover {
+  border-color: var(--cl-accent);
+  background-color: var(--cl-normal);
+  color: var(--cl-accent);
 }
