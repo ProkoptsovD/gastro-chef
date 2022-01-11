@@ -7,15 +7,15 @@
 
   &::before {
     position: absolute;
-    top: 0;
-    right: 0;
+    bottom: 18.3rem;
+    left: -1.7rem;
 
     content: "";
-    width: 100%;
-    height: 519px;
+    width: calc(100vw + 20px);
+    height: 100%;
+
     background-color: var(--cl-accent);
-    // clip-path: circle(259px at 78.5% 0);
-    clip-path: circle(259px at 75.5% -31px);
+    clip-path: circle(16.188rem at 16.7rem 16.5rem);
 
     z-index: getZ(-1);
   }

@@ -1,0 +1,75 @@
+.control {
+  display: flex;
+  //====================button styles================//
+  &__btn {
+    width: 34px;
+    height: 34px;
+
+    transition: background-color getTime(normal) getTransition(1);
+
+    &:hover {
+      background-color: var(--cl-accent);
+    }
+  }
+
+  &__btn-prev-next {
+    fill: var(--cl-accent);
+
+    transition: fill getTime(normal) getTransition(1);
+
+    .control__btn:hover & {
+      fill: var(--cl-normal);
+    }
+  }
+  //====================dot styles=======================//
+  &__dot-outer {
+    display: flex;
+
+    & > :not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+
+    fill: var(--cl-accent);
+
+    overflow: visible;
+    cursor: pointer;
+
+    transition: transform getTime(normal) getTimeFunc(1);
+
+    &:hover {
+      transform: scale(1.25);
+    }
+  }
+}
+//==================inner dot styles==================//
+.control__dot-circle-1 {
+  fill: var(--cl-accent);
+  transition: fill getTime(normal) getTimeFunc(1);
+
+  .control__dot:hover & {
+    fill: var(--cl-darker);
+  }
+}
+
+.control__dot-mask {
+  opacity: 0;
+  transition: opacity getTime(normal) getTimeFunc(1);
+}
+.control__dot:hover .control__dot-mask {
+  opacity: 1;
+}
+//===============classes for currenr dot====================//
+.control__dot.is-current {
+  transform: scale(1.25);
+}
+.control__dot-circle-1.is-current {
+  fill: var(--cl-darker);
+}
+.control__dot-mask.is-current {
+  opacity: 1;
+}

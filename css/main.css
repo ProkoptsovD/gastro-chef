@@ -431,6 +431,30 @@ body {
   color: var(--cl-normal);
 }
 
+.svg-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.svg-btn__icon {
+  width: 10px;
+  height: 14px;
+  fill: inherit;
+}
+
 .follow-up-btn {
   --size-xs: 21px;
   --size-s: 26px;
@@ -647,6 +671,93 @@ body {
   color: var(--cl-accent);
 }
 
+.control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.control__btn {
+  width: 34px;
+  height: 34px;
+  -webkit-transition: background-color 250ms getTransition(1);
+  transition: background-color 250ms getTransition(1);
+}
+
+.control__btn:hover {
+  background-color: var(--cl-accent);
+}
+
+.control__btn-prev-next {
+  fill: var(--cl-accent);
+  -webkit-transition: fill 250ms getTransition(1);
+  transition: fill 250ms getTransition(1);
+}
+
+.control__btn:hover .control__btn-prev-next {
+  fill: var(--cl-normal);
+}
+
+.control__dot-outer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.control__dot-outer > :not(:last-child) {
+  margin-right: 15px;
+}
+
+.control__dot {
+  width: 10px;
+  height: 10px;
+  fill: var(--cl-accent);
+  overflow: visible;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
+}
+
+.control__dot:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+.contol__dot-circle-1 {
+  fill: var(--cl-accent);
+  -webkit-transition: fill 250ms linear;
+  transition: fill 250ms linear;
+}
+
+.control__dot:hover .contol__dot-circle-1 {
+  fill: var(--cl-darker);
+}
+
+.control__dot-mask {
+  opacity: 0;
+  -webkit-transition: opacity 250ms linear;
+  transition: opacity 250ms linear;
+}
+
+.control__dot:hover .control__dot-mask {
+  opacity: 1;
+}
+
+.control__dot.is-current {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+.control__dot-circle-1.is-current {
+  fill: var(--cl-darker);
+}
+
+.control__dot-mask.is-current {
+  opacity: 1;
+}
+
 .header {
   position: relative;
   padding: 20px 0 0 0;
@@ -656,14 +767,14 @@ body {
 
 .header::before {
   position: absolute;
-  top: 0;
-  right: 0;
+  bottom: 18.3rem;
+  left: -1.7rem;
   content: "";
-  width: 100%;
-  height: 519px;
+  width: calc(100vw + 20px);
+  height: 100%;
   background-color: var(--cl-accent);
-  -webkit-clip-path: circle(259px at 75.5% -31px);
-          clip-path: circle(259px at 75.5% -31px);
+  -webkit-clip-path: circle(16.188rem at 16.7rem 16.5rem);
+          clip-path: circle(16.188rem at 16.7rem 16.5rem);
   z-index: -1;
 }
 
