@@ -664,7 +664,7 @@ body {
 
 .slider__price {
   display: block;
-  margin-bottom: 45px;
+  margin-bottom: 24px;
   font-weight: 700;
   font-size: 18px;
   line-height: 1;
@@ -688,8 +688,6 @@ body {
   --scale-factor: 2.4289;
   width: 14px;
   height: 14px;
-  -webkit-transition: scale 250ms linear;
-  transition: scale 250ms linear;
 }
 
 .control__btn:hover {
@@ -768,11 +766,11 @@ body {
 
 .header::before {
   position: absolute;
-  bottom: 18.3rem;
+  bottom: 12.9rem;
   left: -1.7rem;
   content: "";
   width: calc(100vw + 20px);
-  height: 100%;
+  height: 100vh;
   background-color: var(--cl-accent);
   -webkit-clip-path: circle(16.188rem at 16.7rem 16.5rem);
           clip-path: circle(16.188rem at 16.7rem 16.5rem);

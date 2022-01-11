@@ -5,14 +5,30 @@
 
   filter: drop-shadow(getShadow(4));
 
+  // &::before {
+  //   position: absolute;
+  //   bottom: 15.3rem;
+  //   // bottom: 18.3rem;
+  //   left: -1.7rem;
+
+  //   content: "";
+  //   width: calc(100vw + 20px);
+  //   height: 100%;
+
+  //   background-color: var(--cl-accent);
+  //   clip-path: circle(16.188rem at 16.7rem 16.5rem);
+
+  //   z-index: getZ(-1);
+  // }
   &::before {
     position: absolute;
-    bottom: 18.3rem;
+    bottom: 12.9rem;
+    // bottom: 18.3rem;
     left: -1.7rem;
 
     content: "";
-    width: calc(100vw + 20px);
-    height: 100%;
+    width: calc(100vw + 1.7rem);
+    height: 100vh;
 
     background-color: var(--cl-accent);
     clip-path: circle(16.188rem at 16.7rem 16.5rem);
