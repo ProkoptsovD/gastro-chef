@@ -1,32 +1,45 @@
 .control {
   display: flex;
+  align-items: center;
   //====================button styles================//
   &__btn {
-    width: 34px;
-    height: 34px;
+    --scale-factor: 2.4289;
 
-    transition: background-color getTime(normal) getTransition(1);
+    width: 14px;
+    height: 14px;
+
+    // transition: background-color getTime(normal) getTimeFunc(1);
 
     &:hover {
       background-color: var(--cl-accent);
+
+      transform: scale(2.4289);
     }
   }
 
   &__btn-prev-next {
-    fill: var(--cl-accent);
+    width: 12px;
+    height: 14px;
 
-    transition: fill getTime(normal) getTransition(1);
+    fill: var(--cl-accent);
+    // transition: fill getTime(normal) getTimeFunc(1);
 
     .control__btn:hover & {
       fill: var(--cl-normal);
+
+      //prevents icon from scaling while button scales on hover
+      transform: scale(calc(1 / var(--scale-factor)));
     }
   }
   //====================dot styles=======================//
   &__dot-outer {
     display: flex;
 
+    margin-left: auto;
+    margin-right: auto;
+
     & > :not(:last-child) {
-      margin-right: 15px;
+      margin-right: 11px;
     }
   }
 
@@ -41,9 +54,9 @@
 
     transition: transform getTime(normal) getTimeFunc(1);
 
-    &:hover {
-      transform: scale(1.25);
-    }
+    // &:hover {
+    //   transform: scale(1.25);
+    // }
   }
 }
 //==================inner dot styles==================//
@@ -51,18 +64,18 @@
   fill: var(--cl-accent);
   transition: fill getTime(normal) getTimeFunc(1);
 
-  .control__dot:hover & {
-    fill: var(--cl-darker);
-  }
+  // .control__dot:hover & {
+  //   fill: var(--cl-darker);
+  // }
 }
 
 .control__dot-mask {
   opacity: 0;
   transition: opacity getTime(normal) getTimeFunc(1);
 }
-.control__dot:hover .control__dot-mask {
-  opacity: 1;
-}
+// .control__dot:hover .control__dot-mask {
+//   opacity: 1;
+// }
 //===============classes for currenr dot====================//
 .control__dot.is-current {
   transform: scale(1.25);

@@ -62,14 +62,13 @@
 }
 .slider__price {
   display: block;
-  margin-bottom: 45px;
+  margin-bottom: 24px;
 
   @include font-preset(700, 18px, 18px);
   color: var(--cl-accent);
 }
 
-// //==============styles for controls block=================//
-// .slider__controls {
-
-//   margin-right: auto;
-// }
+//==============styles for controls block=================//
+.slider__control {
+  width: 156px;
+}
