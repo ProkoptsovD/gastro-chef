@@ -13,6 +13,8 @@
   border-radius: 190px;
   box-shadow: getShadow(4);
 
+  cursor: pointer;
+
   transition: background-color getTime(normal) getTimeFunc(1),
     color getTime(faster) getTimeFunc(1);
 }
@@ -38,7 +40,8 @@
   color: var(--cl-normal);
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   border-color: var(--cl-accent);
   background-color: var(--cl-normal);
   color: var(--cl-accent);

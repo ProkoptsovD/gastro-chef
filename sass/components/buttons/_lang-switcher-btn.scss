@@ -1,5 +1,5 @@
 .lang-switcher__btn {
-  @include btn(--size-md, --cl-normal);
+  @include btn;
   --fs: 16px;
   --lh: lineHeight(16px, 16px);
 

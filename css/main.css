@@ -34,6 +34,10 @@
   --cl-link-active: #3d9646;
 }
 
+body {
+  width: getSize((mobile: (r-btn--xs: 21px, r-btn--s: 26px, r-btn--large: 64px)), mobile, r-btn--xs);
+}
+
 .slider__title {
   position: absolute;
   width: 1px;
@@ -361,6 +365,7 @@ body {
   border-radius: 190px;
   -webkit-box-shadow: 0px 0px 40px #56565630;
           box-shadow: 0px 0px 40px #56565630;
+  cursor: pointer;
   -webkit-transition: background-color 250ms linear, color 150ms linear;
   transition: background-color 250ms linear, color 150ms linear;
 }
@@ -386,17 +391,14 @@ body {
   color: var(--cl-normal);
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   border-color: var(--cl-accent);
   background-color: var(--cl-normal);
   color: var(--cl-accent);
 }
 
 .lang-switcher__btn {
-  --size-xs: 21px;
-  --size-s: 26px;
-  --size-md: 39px;
-  --size-lg: 64;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -406,14 +408,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: var(--size-md);
-  height: var(--size-md);
+  width: 41px;
+  width: 41px;
   font-family: var(--font-secondary);
   border: 0;
   border-radius: 50%;
   -webkit-box-shadow: 0px 0px 40px #56565630;
           box-shadow: 0px 0px 40px #56565630;
-  background-color: var(--cl-normal);
   cursor: pointer;
   --fs: 16px;
   --lh: lineHeight(16px, 16px);
@@ -447,6 +448,7 @@ body {
   border: none;
   border-radius: 50%;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .svg-btn__icon {
@@ -456,10 +458,6 @@ body {
 }
 
 .follow-up-btn {
-  --size-xs: 21px;
-  --size-s: 26px;
-  --size-md: 39px;
-  --size-lg: 64;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -469,14 +467,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: var(--size-xs);
-  height: var(--size-xs);
+  width: 41px;
+  width: 41px;
   font-family: var(--font-secondary);
   border: 0;
   border-radius: 50%;
   -webkit-box-shadow: 0px 0px 40px #56565630;
           box-shadow: 0px 0px 40px #56565630;
-  background-color: var(--cl-bg);
   cursor: pointer;
   --cl-bg: #020202;
   padding: 3px;
@@ -491,10 +488,6 @@ body {
 .mobile-menu-btn {
   --size-hover: 1.1;
   --fill-icon: #020202;
-  --size-xs: 21px;
-  --size-s: 26px;
-  --size-md: 39px;
-  --size-lg: 64;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -504,14 +497,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: var(--size-lg);
-  height: var(--size-lg);
+  width: 41px;
+  width: 41px;
   font-family: var(--font-secondary);
   border: 0;
   border-radius: 50%;
   -webkit-box-shadow: 0px 0px 40px #56565630;
           box-shadow: 0px 0px 40px #56565630;
-  background-color: var(--cl-normal);
   cursor: pointer;
   padding: 21.5px 19px;
   -webkit-transition: -webkit-transform 150ms linear;
@@ -555,10 +547,6 @@ body {
 
 .contact-tel {
   --size-hover: 1.1;
-  --size-xs: 21px;
-  --size-s: 26px;
-  --size-md: 39px;
-  --size-lg: 64;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -568,14 +556,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: var(--size-lg);
-  height: var(--size-lg);
+  width: 41px;
+  width: 41px;
   font-family: var(--font-secondary);
   border: 0;
   border-radius: 50%;
   -webkit-box-shadow: 0px 0px 40px #56565630;
           box-shadow: 0px 0px 40px #56565630;
-  background-color: var(--cl-normal);
   cursor: pointer;
   padding: 15px 18px 18px 18px;
   -webkit-transition: -webkit-transform 150ms linear;
@@ -690,7 +677,7 @@ body {
   height: 14px;
 }
 
-.control__btn:hover {
+.control__btn:hover, .control__btn:focus {
   background-color: var(--cl-accent);
   -webkit-transform: scale(2.4289);
           transform: scale(2.4289);
@@ -766,14 +753,14 @@ body {
 
 .header::before {
   position: absolute;
-  bottom: 12.9rem;
+  bottom: 62.9rem;
   left: -1.7rem;
   content: "";
-  width: calc(100vw + 20px);
+  width: calc(100vw + 1.7rem);
   height: 100vh;
   background-color: var(--cl-accent);
-  -webkit-clip-path: circle(16.188rem at 16.7rem 16.5rem);
-          clip-path: circle(16.188rem at 16.7rem 16.5rem);
+  -webkit-clip-path: circle(16.188rem at 17rem 17.5rem);
+          clip-path: circle(16.188rem at 17rem 17.5rem);
   z-index: -1;
 }
 
@@ -833,7 +820,6 @@ body {
   margin-right: 9px;
 }
 
-.sidebar,
 .navigation,
 .lang-switcher {
   display: none;
@@ -842,6 +828,16 @@ body {
 .header__slider {
   padding-top: 165px;
   padding-left: 30px;
+}
+
+.header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 .logo {
@@ -858,5 +854,172 @@ body {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.sidebar {
+  --cl-icon: #020202;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sidebar__item {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 41px;
+  width: 41px;
+  font-family: var(--font-secondary);
+  border: 0;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 40px #56565630;
+          box-shadow: 0px 0px 40px #56565630;
+  cursor: pointer;
+  border: 0.3px solid var(--cl-normal);
+  -webkit-box-shadow: 0px 0px 30px #56565625;
+          box-shadow: 0px 0px 30px #56565625;
+  -webkit-transition: width 250ms linear, border-radius 250ms linear, fill 250ms linear;
+  transition: width 250ms linear, border-radius 250ms linear, fill 250ms linear;
+}
+
+.sidebar__icon {
+  width: 35px;
+  height: 35px;
+  fill: var(--cl-icon);
+  color: var(--cl-icon);
+  -webkit-transition: fill 250ms linear, color 250ms linear;
+  transition: fill 250ms linear, color 250ms linear;
+}
+
+.sidebar__link {
+  position: absolute;
+  top: 20.5px;
+  left: 20.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: var(--font-secondary);
+  font-size: 10px;
+  line-height: 1.4;
+  color: var(--cl-icon);
+  -webkit-transform: translate(-57%, -50%);
+          transform: translate(-57%, -50%);
+}
+
+.sidebar__item:last-child > .sidebar__link {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 7px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.sidebar__link-span {
+  display: block;
+  margin-bottom: -7px;
+  color: var(--cl-icon);
+  -webkit-transition: color 250ms linear;
+  transition: color 250ms linear;
+}
+
+.sidebar__item:hover .sidebar__link-span,
+.sidebar__item:focus .sidebar__link-span,
+.sidebar__item:active .sidebar__link-span {
+  color: var(--cl-accent);
+}
+
+.sidebar__item:nth-child(1) .sidebar__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+}
+
+.sidebar__item:nth-child(2) .sidebar__icon {
+  width: 23px;
+}
+
+.sidebar__item:nth-child(3) .sidebar__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.sidebar__item:nth-child(4) .sidebar__icon {
+  height: 34px;
+}
+
+.sidebar__item:nth-child(5) .sidebar__icon {
+  width: 27px;
+}
+
+.sidebar__item:nth-child(6) .sidebar__icon {
+  width: 23px;
+  height: 23px;
+}
+
+.sidebar__link-text {
+  position: absolute;
+  top: 50%;
+  right: -65px;
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing);
+  color: var(--cl-accent);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 250ms linear, visibility 250ms linear;
+  transition: opacity 250ms linear, visibility 250ms linear;
+}
+
+.sidebar__item:active .sidebar__link-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*  here I'm using sizes of hovered buttons from desktop version like a base because
+    1) there is hover and active states only for desktop are pointed
+    2) such calculation looks quite wiered and but it's the best I can at the moment
+   
+*/
+.sidebar__item:hover,
+.sidebar__item:focus {
+  width: 59.15714px;
+  border-radius: 190px;
+  fill: var(--cl-accent);
+}
+
+.sidebar__item:active {
+  width: 110.11429px;
+  border-radius: 190px;
+}
+
+.sidebar__item:hover .sidebar__icon,
+.sidebar__item:focus .sidebar__icon,
+.sidebar__item:active .sidebar__icon {
+  fill: var(--cl-accent);
+  color: var(--cl-accent);
 }
 /*# sourceMappingURL=main.css.map */

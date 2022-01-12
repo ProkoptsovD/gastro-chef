@@ -3,6 +3,11 @@
   @return ($line-height / $font-size);
 }
 
+//function to find size factor for hovered buttons
+@function getFactoredSize($enlarged, $base, $need-to-calc) {
+  @return (($enlarged / $base) * $need-to-calc);
+}
+
 //simple function that allows to get needed box-shadow
 @function getShadow($key) {
   @return map-get($box-shadow-set, $key);
@@ -23,7 +28,15 @@
   @return map-get($breakpoints, $key);
 }
 
-//function to get z-indexes
+//function to get z-layers
 @function getZ($key) {
   @return map-get($z-index, $key);
+}
+
+//
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
 }

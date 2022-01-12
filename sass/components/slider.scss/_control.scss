@@ -10,7 +10,8 @@
 
     // transition: background-color getTime(normal) getTimeFunc(1);
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: var(--cl-accent);
 
       transform: scale(2.4289);

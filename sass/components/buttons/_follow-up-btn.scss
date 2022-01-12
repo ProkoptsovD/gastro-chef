@@ -1,5 +1,5 @@
 .follow-up-btn {
-  @include btn(--size-xs, --cl-bg);
+  @include btn;
   --cl-bg: #020202;
 
   padding: 3px;

@@ -1,7 +1,7 @@
 .contact-tel {
   --size-hover: 1.1;
 
-  @include btn(--size-lg, --cl-normal);
+  @include btn;
 
   padding: 15px 18px 18px 18px;
 

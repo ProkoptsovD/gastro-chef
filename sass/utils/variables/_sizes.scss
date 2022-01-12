@@ -1,0 +1,12 @@
+$sizes: (
+  mobile: (
+    //round button sizes
+    r-btn--xs: 21px,
+    r-btn--s: 26px,
+    r-btn--large: 64px,
+  ),
+);
+
+body {
+  width: getSize($sizes, mobile, r-btn--xs);
+}

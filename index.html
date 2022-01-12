@@ -92,140 +92,164 @@
                 </nav>
             </div>
 
-            <nav class="header__sidebar" aria-label="Дополнительный блок навигации по сайту">
-                <ul class="sidebar" aria-label="Боковое меню с выбором категории продуктов">
-                    <li class="sidebar__item">
-                        <a class="sidebar__link" href="#" aria-labelledby="Перейти на страницу, чтобы подобрать меню по калорийности">
-                            Ккал
-                        </a>
-                    </li>
-                    <li class="sidebar__item">
-                        <a class="sidebar__link" href="#" aria-labelledby="Перейти на страницу с блюдами из рыбы">
-                            <svg>
-                                <use href="./lib/icons/icons.svg#fish"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="sidebar__item">
-                        <a class="sidebar__link" href="#" aria-labelledby="Перейти на страницу с овощными и вегетерианскими блюдами">
-                            <svg>
-                                <use href="./lib/icons/icons.svg#carrot"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="sidebar__item">
-                        <a class="sidebar__link" href="#" aria-labelledby="Перейти на страницу с напитками">
-                            <svg>
-                                <use href="./lib/icons/icons.svg#bottle"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="sidebar__item">
-                        <a class="sidebar__link" href="#" aria-labelledby="Перейти на страницу с блюдами из мяса">
-                            <svg>
-                                <use href="./lib/icons/icons.svg#meat"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="sidebar__item">
-                        <a class="sidebar__link" href="#" aria-labelledby="Перейти на страницу, чтобы составить рацион из пяти блюд">
-                            5
-                            <svg>
-                                <use href="./lib/icons/icons.svg#table"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
-            <article class="slider header__slider" aria-label="Галерея с лучшими предложениями" id="slider">
-                <h1 class="slider__title">Лучшие предложения</h1>
-                <div class="slider__pictureset header__pictureset" aria-labelledby="Изображения товаров к программам питания">
-                    <picture>
-                        <source
-                            srcset="./lib/images/mobile/webp/home/home-01@1x.webp 1x, ./lib/images/mobile/webp/home/home-01@2x.webp 2x, ./lib/images/mobile/webp/home/home-01@3x.webp 3x"
-                            type="image/webp">
-                        <source
-                            srcset="./lib/images/mobile/jpg/home/home-01@1x.jpg 1x, ./lib/images/mobile/jpg/home/home-01@2x.jpg 2x, ./lib/images/mobile/jpg/home/home-01@3x.jpg 3x"
-                            type="image/jpg">
-                
-                        <img class="slider__picture" src="./lib/images/mobile/jpg/home/home01-@1x.jpg"
-                            alt="Иллюстрация к предложению. Авокадо и бутолочка со смузи из авокадо">
-                    </picture>
-                </div>
-                <div class="slider__inner">
-                    <h2 class="slider__subtitle">
-                        Detox программа –</br> 
-                            <mark class="slider__mark">
-                                вкусное очищение</br>
-                            </mark>
-                        организма
-                    </h2>
-                    <p class="slider__text">
-                        8 бутылочек 
-                            <mark class="slider__mark">
-                                натуральных</br>
-                            </mark>
-                        смузи и фрешей.
-                    </p>
-
-                    <div class="slider__subinner">
-                        <button class="btn btn--inactive btn--s slider__btn" type="button" aria-labelledby="Заказать">
-                            Заказать
-                        </button>
-                        <span class="slider__offer-meta">
-                            Пробный день всего:
-                            <span class="slider__price">
-                                427 грн
+            <div class="header__wrapper">
+                <nav class="header__sidebar" aria-label="Дополнительный блок навигации по сайту">
+                    <ul class="sidebar" aria-label="Боковое меню с выбором категории продуктов">
+                        <li class="sidebar__item">
+                            <a class="sidebar__link" href="#" aria-labelledby="Перейти на страницу, чтобы подобрать меню по калорийности">           
+                                <span class="sidebar__icon">
+                                    ККал
+                                </span>
+                                <b class="sidebar__link-text">
+                                    Energy
+                                </b>
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a class="sidebar__link" href="#" aria-labelledby="Перейти на страницу с блюдами из рыбы">
+                                <svg class="sidebar__icon">
+                                    <use href="./lib/icons/icons.svg#fish"></use>
+                                </svg>
+                                <b class="sidebar__link-text">
+                                    Fish
+                                </b>
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a class="sidebar__link" href="#" aria-labelledby="Перейти на страницу с овощными и вегетерианскими блюдами">
+                                <svg class="sidebar__icon">
+                                    <use href="./lib/icons/icons.svg#carrot"></use>
+                                </svg>
+                                <b class="sidebar__link-text">
+                                    Vegetables
+                                </b>
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a class="sidebar__link" href="#" aria-labelledby="Перейти на страницу с напитками">
+                                <svg class="sidebar__icon">
+                                    <use href="./lib/icons/icons.svg#bottle"></use>
+                                </svg>
+                                <b class="sidebar__link-text">
+                                    Drinks
+                                </b>
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a class="sidebar__link" href="#" aria-labelledby="Перейти на страницу с блюдами из мяса">
+                                <svg class="sidebar__icon">
+                                    <use href="./lib/icons/icons.svg#meat"></use>
+                                </svg>
+                                <b class="sidebar__link-text">
+                                    Meat
+                                </b>
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a class="sidebar__link" href="#" aria-labelledby="Перейти на страницу, чтобы составить рацион из пяти блюд">
+                                <span class="sidebar__link-span">
+                                    5
+                                </span>
+                                <svg class="sidebar__icon">
+                                    <use href="./lib/icons/icons.svg#table"></use>
+                                </svg>
+                                <b class="sidebar__link-text">
+                                    Dishes
+                                </b>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+    
+                <article class="slider header__slider" aria-label="Галерея с лучшими предложениями" id="slider">
+                    <h1 class="slider__title">Лучшие предложения</h1>
+                    <div class="slider__pictureset header__pictureset" aria-labelledby="Изображения товаров к программам питания">
+                        <picture>
+                            <source
+                                srcset="./lib/images/mobile/webp/home/home-01@1x.webp 1x, ./lib/images/mobile/webp/home/home-01@2x.webp 2x, ./lib/images/mobile/webp/home/home-01@3x.webp 3x"
+                                type="image/webp">
+                            <source
+                                srcset="./lib/images/mobile/jpg/home/home-01@1x.jpg 1x, ./lib/images/mobile/jpg/home/home-01@2x.jpg 2x, ./lib/images/mobile/jpg/home/home-01@3x.jpg 3x"
+                                type="image/jpg">
+                    
+                            <img class="slider__picture" src="./lib/images/mobile/jpg/home/home01-@1x.jpg"
+                                alt="Иллюстрация к предложению. Авокадо и бутолочка со смузи из авокадо">
+                        </picture>
+                    </div>
+                    <div class="slider__inner">
+                        <h2 class="slider__subtitle">
+                            Detox программа –</br> 
+                                <mark class="slider__mark">
+                                    вкусное очищение</br>
+                                </mark>
+                            организма
+                        </h2>
+                        <p class="slider__text">
+                            8 бутылочек 
+                                <mark class="slider__mark">
+                                    натуральных</br>
+                                </mark>
+                            смузи и фрешей.
+                        </p>
+    
+                        <div class="slider__subinner">
+                            <button class="btn btn--inactive btn--s slider__btn" type="button" aria-labelledby="Заказать">
+                                Заказать
+                            </button>
+                            <span class="slider__offer-meta">
+                                Пробный день всего:
+                                <span class="slider__price">
+                                    427 грн
+                                </span>
                             </span>
-                        </span>
+                        </div>
                     </div>
-                </div>
-                <div class="control slider__control" aria-controls="slider">
-                    <button class="svg-btn control__btn">
-                        <svg class="svg-btn__icon control__btn-prev-next">
-                            <use href="./lib/icons/icons.svg#arrow-left"></use>
-                        </svg>
-                    </button>
-                    <!-- dots with 3 layers -->
-                    <div class="control__dot-outer">
-                        <svg class="control__dot" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle class="control__dot-circle-1" cx="7" cy="5" r="7" fill="#DEE6EE" />
-                            <path class="control__dot-mask"
-                                d="M14 5C14 6.15116 13.7161 7.28455 13.1734 8.29978C12.6308 9.31501 11.8461 10.1807 10.889 10.8203C9.93184 11.4598 8.83173 11.8535 7.68612 11.9663C6.54051 12.0791 5.38475 11.9077 4.32122 11.4672C3.25769 11.0266 2.31921 10.3306 1.58893 9.44075C0.858641 8.5509 0.359083 7.49467 0.134503 6.36563C-0.0900765 5.2366 -0.0327456 4.0696 0.301418 2.96801C0.635581 1.86642 1.23626 0.864244 2.05025 0.0502529L7 5H14Z"
-                                fill="#64D370" />
-                            <circle cx="7" cy="5" r="5" fill="#f5fafe" />
-                        </svg>
-                        <svg class="control__dot is-current" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle class="control__dot-circle-1 is-current" cx="7" cy="5" r="7" fill="#DEE6EE" />
-                            <path class="control__dot-mask is-current"
-                                d="M14 5C14 6.15116 13.7161 7.28455 13.1734 8.29978C12.6308 9.31501 11.8461 10.1807 10.889 10.8203C9.93184 11.4598 8.83173 11.8535 7.68612 11.9663C6.54051 12.0791 5.38475 11.9077 4.32122 11.4672C3.25769 11.0266 2.31921 10.3306 1.58893 9.44075C0.858641 8.5509 0.359083 7.49467 0.134503 6.36563C-0.0900765 5.2366 -0.0327456 4.0696 0.301418 2.96801C0.635581 1.86642 1.23626 0.864244 2.05025 0.0502529L7 5H14Z"
-                                fill="#64D370" />
-                            <circle cx="7" cy="5" r="5" fill="#f5fafe" />
-                        </svg>
-                        <svg class="control__dot" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle class="control__dot-circle-1" cx="7" cy="5" r="7" fill="#DEE6EE" />
-                            <path class="control__dot-mask"
-                                d="M14 5C14 6.15116 13.7161 7.28455 13.1734 8.29978C12.6308 9.31501 11.8461 10.1807 10.889 10.8203C9.93184 11.4598 8.83173 11.8535 7.68612 11.9663C6.54051 12.0791 5.38475 11.9077 4.32122 11.4672C3.25769 11.0266 2.31921 10.3306 1.58893 9.44075C0.858641 8.5509 0.359083 7.49467 0.134503 6.36563C-0.0900765 5.2366 -0.0327456 4.0696 0.301418 2.96801C0.635581 1.86642 1.23626 0.864244 2.05025 0.0502529L7 5H14Z"
-                                fill="#64D370" />
-                            <circle cx="7" cy="5" r="5" fill="#f5fafe" />
-                        </svg>
-                        <svg class="control__dot" width="14" height="12" viewBox="0 0 14 12" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <circle class="control__dot-circle-1" cx="7" cy="5" r="7" fill="#DEE6EE" />
-                            <path class="control__dot-mask"
-                                d="M14 5C14 6.15116 13.7161 7.28455 13.1734 8.29978C12.6308 9.31501 11.8461 10.1807 10.889 10.8203C9.93184 11.4598 8.83173 11.8535 7.68612 11.9663C6.54051 12.0791 5.38475 11.9077 4.32122 11.4672C3.25769 11.0266 2.31921 10.3306 1.58893 9.44075C0.858641 8.5509 0.359083 7.49467 0.134503 6.36563C-0.0900765 5.2366 -0.0327456 4.0696 0.301418 2.96801C0.635581 1.86642 1.23626 0.864244 2.05025 0.0502529L7 5H14Z"
-                                fill="#64D370" />
-                            <circle cx="7" cy="5" r="5" fill="#f5fafe" />
-                        </svg>
+                    <div class="control slider__control" aria-controls="slider">
+                        <button class="svg-btn control__btn">
+                            <svg class="svg-btn__icon control__btn-prev-next">
+                                <use href="./lib/icons/icons.svg#arrow-left"></use>
+                            </svg>
+                        </button>
+                        <!-- dots with 3 layers -->
+                        <div class="control__dot-outer">
+                            <svg class="control__dot" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="control__dot-circle-1" cx="7" cy="5" r="7" fill="#DEE6EE" />
+                                <path class="control__dot-mask"
+                                    d="M14 5C14 6.15116 13.7161 7.28455 13.1734 8.29978C12.6308 9.31501 11.8461 10.1807 10.889 10.8203C9.93184 11.4598 8.83173 11.8535 7.68612 11.9663C6.54051 12.0791 5.38475 11.9077 4.32122 11.4672C3.25769 11.0266 2.31921 10.3306 1.58893 9.44075C0.858641 8.5509 0.359083 7.49467 0.134503 6.36563C-0.0900765 5.2366 -0.0327456 4.0696 0.301418 2.96801C0.635581 1.86642 1.23626 0.864244 2.05025 0.0502529L7 5H14Z"
+                                    fill="#64D370" />
+                                <circle cx="7" cy="5" r="5" fill="#f5fafe" />
+                            </svg>
+                            <svg class="control__dot is-current" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="control__dot-circle-1 is-current" cx="7" cy="5" r="7" fill="#DEE6EE" />
+                                <path class="control__dot-mask is-current"
+                                    d="M14 5C14 6.15116 13.7161 7.28455 13.1734 8.29978C12.6308 9.31501 11.8461 10.1807 10.889 10.8203C9.93184 11.4598 8.83173 11.8535 7.68612 11.9663C6.54051 12.0791 5.38475 11.9077 4.32122 11.4672C3.25769 11.0266 2.31921 10.3306 1.58893 9.44075C0.858641 8.5509 0.359083 7.49467 0.134503 6.36563C-0.0900765 5.2366 -0.0327456 4.0696 0.301418 2.96801C0.635581 1.86642 1.23626 0.864244 2.05025 0.0502529L7 5H14Z"
+                                    fill="#64D370" />
+                                <circle cx="7" cy="5" r="5" fill="#f5fafe" />
+                            </svg>
+                            <svg class="control__dot" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="control__dot-circle-1" cx="7" cy="5" r="7" fill="#DEE6EE" />
+                                <path class="control__dot-mask"
+                                    d="M14 5C14 6.15116 13.7161 7.28455 13.1734 8.29978C12.6308 9.31501 11.8461 10.1807 10.889 10.8203C9.93184 11.4598 8.83173 11.8535 7.68612 11.9663C6.54051 12.0791 5.38475 11.9077 4.32122 11.4672C3.25769 11.0266 2.31921 10.3306 1.58893 9.44075C0.858641 8.5509 0.359083 7.49467 0.134503 6.36563C-0.0900765 5.2366 -0.0327456 4.0696 0.301418 2.96801C0.635581 1.86642 1.23626 0.864244 2.05025 0.0502529L7 5H14Z"
+                                    fill="#64D370" />
+                                <circle cx="7" cy="5" r="5" fill="#f5fafe" />
+                            </svg>
+                            <svg class="control__dot" width="14" height="12" viewBox="0 0 14 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle class="control__dot-circle-1" cx="7" cy="5" r="7" fill="#DEE6EE" />
+                                <path class="control__dot-mask"
+                                    d="M14 5C14 6.15116 13.7161 7.28455 13.1734 8.29978C12.6308 9.31501 11.8461 10.1807 10.889 10.8203C9.93184 11.4598 8.83173 11.8535 7.68612 11.9663C6.54051 12.0791 5.38475 11.9077 4.32122 11.4672C3.25769 11.0266 2.31921 10.3306 1.58893 9.44075C0.858641 8.5509 0.359083 7.49467 0.134503 6.36563C-0.0900765 5.2366 -0.0327456 4.0696 0.301418 2.96801C0.635581 1.86642 1.23626 0.864244 2.05025 0.0502529L7 5H14Z"
+                                    fill="#64D370" />
+                                <circle cx="7" cy="5" r="5" fill="#f5fafe" />
+                            </svg>
+                        </div>
+                        <button class="svg-btn control__btn">
+                            <svg class="svg-btn__icon control__btn-prev-next">
+                                <use href="./lib/icons/icons.svg#arrow-right"></use>
+                            </svg>
+                        </button>
                     </div>
-                    <button class="svg-btn control__btn">
-                        <svg class="svg-btn__icon control__btn-prev-next">
-                            <use href="./lib/icons/icons.svg#arrow-right"></use>
-                        </svg>
-                    </button>
-                </div>
-            </article>
+                </article>
+            </div>
         </div>
     </header>
     <main>

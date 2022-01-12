@@ -1,0 +1,163 @@
+.sidebar {
+  --cl-icon: #020202;
+
+  display: flex;
+
+  &__item {
+    position: relative;
+
+    @include btn;
+
+    border: 0.3px solid var(--cl-normal);
+    box-shadow: getShadow(5);
+
+    transition: width getTime(normal) getTimeFunc(1),
+      border-radius getTime(normal) getTimeFunc(1),
+      fill getTime(normal) getTimeFunc(1);
+  }
+
+  &__icon {
+    width: 35px;
+    height: 35px;
+
+    fill: var(--cl-icon);
+    color: var(--cl-icon);
+
+    transition: fill getTime(normal) getTimeFunc(1),
+      color getTime(normal) getTimeFunc(1);
+  }
+}
+
+//========================links styles======================//
+.sidebar__link {
+  position: absolute;
+  top: 20.5px;
+  left: 20.5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: var(--font-secondary);
+  font-size: 10px;
+  line-height: lineHeight(10px, 14px);
+
+  color: var(--cl-icon);
+
+  transform: translate(-57%, -50%);
+}
+
+.sidebar__item:last-child > .sidebar__link {
+  flex-direction: column;
+  padding-top: 7px;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: lineHeight(16px, 16px);
+}
+
+.sidebar__link-span {
+  display: block;
+  margin-bottom: -7px;
+  color: var(--cl-icon);
+
+  transition: color getTime(normal) getTimeFunc(1);
+
+  .sidebar__item:hover &,
+  .sidebar__item:focus &,
+  .sidebar__item:active & {
+    color: var(--cl-accent);
+  }
+}
+//===================svg sizes==========================//
+// make styles only for first element, because there no icon
+//and I need to center text
+
+.sidebar__item:nth-child(1) .sidebar__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 700;
+}
+
+//all svgs have different sizes, so I have to do this
+
+.sidebar__item:nth-child(2) .sidebar__icon {
+  width: 23px;
+}
+.sidebar__item:nth-child(3) .sidebar__icon {
+  width: 40px;
+  height: 40px;
+}
+.sidebar__item:nth-child(4) .sidebar__icon {
+  height: 34px;
+}
+.sidebar__item:nth-child(5) .sidebar__icon {
+  width: 27px;
+}
+.sidebar__item:nth-child(6) .sidebar__icon {
+  width: 23px;
+  height: 23px;
+}
+//====================styles of text inside buttons================//
+.sidebar__link-text {
+  position: absolute;
+  top: 50%;
+  right: -65px;
+
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing);
+
+  color: var(--cl-accent);
+
+  transform: translateY(-50%);
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: opacity getTime(normal) getTimeFunc(1),
+    visibility getTime(normal) getTimeFunc(1);
+
+  .sidebar__item:active & {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+//=======================hover=========================//
+// =======================and==========================//
+// ===================active states====================//
+
+/*  here I'm using sizes of hovered buttons from desktop version like a base because
+    1) there is hover and active states only for desktop are pointed
+    2) such calculation looks quite wiered and but it's the best I can at the moment
+   
+*/
+.sidebar__item:hover,
+.sidebar__item:focus {
+  $enlarged: 101px; //the size of hovered button on desktop
+  $base: 70px; //base size of inactive button on desktop
+  $need-to-calc: 41px; //size of inactive button on mobile
+
+  width: getFactoredSize($enlarged, $base, $need-to-calc);
+
+  border-radius: 190px;
+  fill: var(--cl-accent);
+}
+
+.sidebar__item:active {
+  $enlarged: 188px; //the size of hovered button on desktop
+  $base: 70px; //base size of inactive button on desktop
+  $need-to-calc: 41px; //size of inactive button on mobile
+
+  width: getFactoredSize($enlarged, $base, $need-to-calc);
+  border-radius: 190px;
+}
+
+.sidebar__item:hover .sidebar__icon,
+.sidebar__item:focus .sidebar__icon,
+.sidebar__item:active .sidebar__icon {
+  fill: var(--cl-accent);
+  color: var(--cl-accent);
+}

@@ -22,7 +22,7 @@
   // }
   &::before {
     position: absolute;
-    bottom: 12.9rem;
+    bottom: 62.9rem;
     // bottom: 18.3rem;
     left: -1.7rem;
 
@@ -31,7 +31,7 @@
     height: 100vh;
 
     background-color: var(--cl-accent);
-    clip-path: circle(16.188rem at 16.7rem 16.5rem);
+    clip-path: circle(16.188rem at 17rem 17.5rem);
 
     z-index: getZ(-1);
   }
@@ -97,7 +97,6 @@
 }
 
 //! just for a while
-.sidebar,
 .navigation,
 .lang-switcher {
   display: none;
@@ -108,6 +107,8 @@
   padding-left: 30px;
 }
 
-// .header__pictureset {
-
-// }
+.header__wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+}
+//============styles for sidebar=======================//
